@@ -1,0 +1,21 @@
+* {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.inputArea {
+	display: block;
+	margin: 0 auto;
+	position: relative;
+}
+
+input[name=textInput] {
+	text-align: left;
+	margin: 0 auto;
+}
+
+
+.buy ul {
+	list-style: none;
+	margin-left: -45px;
+}
