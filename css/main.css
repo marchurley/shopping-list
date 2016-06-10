@@ -6,7 +6,6 @@
 .inputArea {
 	display: block;
 	margin: 0 auto;
-	position: relative;
 }
 
 input[name=textInput] {
@@ -17,5 +16,22 @@ input[name=textInput] {
 
 .buy ul {
 	list-style: none;
-	margin-left: -45px;
+	width: 400px;
+	margin: 0 auto;
+	padding-left: 0;
+	border: 3px solid red;
+}
+
+.buy li {
+	text-align: left;
+	padding: 3px 0;
+	margin: 10px 0;
+	border: 1px dashed brown;
+}
+
+button {
+	float: right;
+	font-size: 10px;
+	height: 20px;
+	margin-left: 8px;
 }
