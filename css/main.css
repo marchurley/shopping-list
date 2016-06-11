@@ -14,7 +14,7 @@ input[name=textInput] {
 }
 
 
-.buy ul {
+ul {
 	list-style: none;
 	width: 400px;
 	margin: 0 auto;
@@ -22,7 +22,7 @@ input[name=textInput] {
 	border: 3px solid red;
 }
 
-.buy li {
+li {
 	text-align: left;
 	padding: 3px 0;
 	margin: 10px 0;
@@ -34,4 +34,11 @@ button {
 	font-size: 10px;
 	height: 20px;
 	margin-left: 8px;
+	font-weight: 800;
+}
+
+hr {
+	margin: 50px auto;
+	width: 50%;
+
 }
