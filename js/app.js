@@ -1,8 +1,9 @@
 $(document).ready(function(){
 	add();
-
 });
 
+back();
+again();
 
 function add(){
 	//Define enterKey function on textInput
@@ -66,7 +67,6 @@ function add(){
 }
 
 
-/*
 function back(){
 	//Move item back to Buy list when Up Arrow is clicked
 	$('ul').on('click', 'button', (function(e){
@@ -74,24 +74,25 @@ function back(){
 			$(this).parent().appendTo('.textOutput')
 			$(this).text('✓')
 			$(this).removeClass('up')
-			$(this).addClass('newcheck')
+			$(this).addClass('check2')
 		}
 	}));
 }
-*/
 
 /*
 function again(){
-	//Move item down again to Bag list when check2 is clicked
+	//Move item down to Bag list when check is clicked again
 	$('ul').on('click', 'button', (function(e){
-		if($(e.target).hasClass('newcheck')){
+		if($(e.target).hasClass('check3')){
 			$(this).parent().appendTo('.inmybag')
-			$(this).removeClass('newcheck')
-			$(this).addClass('newup')
-			$(this).text("⇧")
+			$(this).text('✓')
+			$(this).removeClass('check2')
+			$(this).addClass('check3')
 		}
 	}));
-}*/
+}
+
+
 
 
 
