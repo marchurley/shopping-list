@@ -41,5 +41,8 @@ button {
 hr {
 	margin: 50px auto;
 	width: 50%;
+}
 
+.inmybag li {
+	text-decoration: line-through;
 }
