@@ -1,11 +1,5 @@
 $(document).ready(function(){
-	add();
-});
 
-back();
-again();
-
-function add(){
 	//Define enterKey function on textInput
 	$("input[name=textInput]").keyup(function(e){
 		if(e.keyCode==13)
@@ -33,11 +27,13 @@ function add(){
 
 	
 	//Add item when +-button is clicked	
-	$("input[name=add]").click(function(){
+	$("input[name=submit]").click(function(){
 		var listItem = $("input[name=textInput]").val();
 		$(".textOutput").append(
 			"<li>" + 
+			"<span class='item'>" +
 			listItem + 
+			"</span>" +
 			"<button class='check'>" + 
 			"&#10003" + 
 			"</button>" +
@@ -49,6 +45,53 @@ function add(){
 		$("input[name=textInput]").val('');
 	});
 
+	// Add item to my bag
+	$("ul").on('click', '.check', (function(){
+		item = $(this).parent();
+		itemName = item.children(".item").html();
+		$(".inmybag").append(
+			"<li>" + 
+			"<span class='item'>" +
+			itemName + 
+			"</span>" +
+			"<button class='backup'>" + 
+			"&#10003" + 
+			"</button>" +
+			"<button class='delete'>" + 
+			"x" + 
+			"</button>" +
+			"</li>"
+			);
+		item.remove();
+	}));
+
+
+	// Move item back to buy
+	$("ul").on('click', '.backup', (function(){
+		bagItem = $(this).parent();
+		bagItemName = bagItem.children(".item").html();
+		$(".textOutput").append(
+			"<li>" + 
+			"<span class='item'>" +
+			bagItemName + 
+			"</span>" +
+			"<button class='check'>" + 
+			"&#10003" + 
+			"</button>" +
+			"<button class='delete'>" + 
+			"x" + 
+			"</button>" +
+			"</li>"
+			);
+		bagItem.remove();
+	}));
+
+
+
+});
+
+
+	/*
 	//Remove item when x-button is clicked
 	$('ul').on('click', 'button', (function(e){ 
 		if($(e.target).hasClass('delete')){
@@ -64,7 +107,8 @@ function add(){
 			$(this).text("⇧")
 		}
 	}));
-}
+	
+
 
 
 function back(){
