@@ -10,13 +10,14 @@ $(document).ready(function(){
 	//Add item when Enter is pressed on textInput
 	$("input[name=textInput]").bind("enterKey",function(e){
 		var listItem = $("input[name=textInput]").val();
+		if (listItem != ""){
 		$(".textOutput").append(
 			"<li>" + 
 			"<span class='item'>" +
 			listItem + 
 			"</span>" +
 			"<button class='check'>" + 
-			"&#10003" + 
+			"y" + 
 			"</button>" +
 			"<button class='delete'>" + 
 			"x" + 
@@ -24,27 +25,34 @@ $(document).ready(function(){
 			"</li>"
 			);
 	$("input[name=textInput]").val('');
-	});
+	}
+	else {
+		alert ("Please fill out the box to add items");
+	}});
 
 	
 	//Add item when +-button is clicked	
 	$("input[name=submit]").click(function(){
 		var listItem = $("input[name=textInput]").val();
+		if (listItem != ""){
 		$(".textOutput").append(
 			"<li>" + 
 			"<span class='item'>" +
 			listItem + 
 			"</span>" +
 			"<button class='check'>" + 
-			"&#10003" + 
+			"y" + 
 			"</button>" +
 			"<button class='delete'>" + 
 			"x" + 
 			"</button>" +
 			"</li>"
 			);
-		$("input[name=textInput]").val('');
-	});
+	$("input[name=textInput]").val('');
+	}
+	else {
+		alert ("Please fill out the box to add items");
+	}});
 
 	// Add item to my bag
 	$("ul").on('click', '.check', (function(){
@@ -56,7 +64,7 @@ $(document).ready(function(){
 			itemName + 
 			"</span>" +
 			"<button class='backup'>" + 
-			"⇧" + 
+			"b" + 
 			"</button>" +
 			"<button class='delete'>" + 
 			"x" + 
@@ -77,7 +85,7 @@ $(document).ready(function(){
 			bagItemName + 
 			"</span>" +
 			"<button class='check'>" + 
-			"&#10003" + 
+			"y" + 
 			"</button>" +
 			"<button class='delete'>" + 
 			"x" + 

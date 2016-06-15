@@ -2,6 +2,16 @@
 * {
 	text-align: center;
 	margin: 0 auto;
+	font-family: "Architects Daughter", Helvetic, serif;
+}
+
+html {
+	background-color: rgba(16, 214, 93, 0.15);
+}
+
+.main {
+	min-width: 300px;
+	max-width: 800px;
 }
 
 .inputArea {
@@ -9,38 +19,97 @@
 	margin: 0 auto;
 }
 
+h1 {
+	font-family: "Fredericka the Great", Helvetic, serif;
+	font-size: 3em;
+	margin-bottom: 1.5em;
+
+}
+
 input[name=textInput] {
 	text-align: left;
 	margin: 0 auto;
+	font-size: 1.5em;
+	border-radius: 5px;
+	border: 1px solid rgba(31, 228, 31, 0.91);
+	background-color: rgba(16, 214, 93, 0.05);
 }
 
+::-webkit-input-placeholder {
+	color: black;
+}
+:-moz-placeholder {
+	color: black;
+}
+::-moz-placeholder {
+	color: black;
+}
+:-ms-input-placeholder {
+	color: black;
+}
+
+input[name=submit] {
+	font-size: 1.5em;
+	border-radius: 5px;
+	width: 10%;
+	background-color: rgba(31, 228, 31, 0.91);
+	border: 0 none;
+}
+
+h2 {
+	font-size: 2em;
+	margin-top: 1em;
+}
 
 ul {
 	list-style: none;
-	width: 400px;
+	width: 80%;
 	margin: 0 auto;
 	padding-left: 0;
-	border: 3px solid red;
 }
 
 li {
 	text-align: left;
 	padding: 3px 0;
 	margin: 10px 0;
-	border: 1px dashed brown;
+	font-size: 1.5em;
+}
+
+.item {
+	width: 30px;
+	border: 2px, solid red;
 }
 
 button {
 	float: right;
-	font-size: 10px;
-	height: 20px;
 	margin-left: 8px;
-	font-weight: 800;
+	font-weight: 500;
+	text-align: center;
+	height: 1.6em;
+	width: 1.5em;
+	border-radius: 5px;
+	box-shadow: none;
+	border: none;
+	
 }
+
+.check {
+	background-color: green;
+}
+
+.delete {
+	background-color: red;
+}
+
+.backup {
+	background-color: orange;
+}
+
 
 hr {
 	margin: 50px auto;
 	width: 50%;
+	border-color: green;
 }
 
 .inmybag li {
